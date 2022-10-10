@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="testRunner" value="GRADLE" />
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="C:/flutter/.pub-cache/hosted/pub.dartlang.org/connectivity_plus-2.3.6+1/android" />
+            <option value="C:/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_barcode_scanner-2.0.0/android" />
+            <option value="C:/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_plugin_android_lifecycle-2.0.7/android" />
+            <option value="C:/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_secure_storage-5.1.2/android" />
+            <option value="C:/flutter/.pub-cache/hosted/pub.dartlang.org/image_picker_android-0.8.5+2/android" />
+            <option value="C:/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_android-2.0.20/android" />
+            <option value="C:/flutter/.pub-cache/hosted/pub.dartlang.org/scan-1.6.0/android" />
+            <option value="C:/flutter/.pub-cache/hosted/pub.dartlang.org/sqflite-2.0.2+1/android" />
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/app" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>
