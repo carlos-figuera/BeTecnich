@@ -9,9 +9,8 @@ import 'modules/init.routes.dart';
 class AppPages {
   static final List<GetPage> pages = [
     ...InitRoutes.pages,
-
-
     ...DetailOrderRoutes.pages,
+    
 
   ];
 }

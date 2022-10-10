@@ -1,4 +1,4 @@
-package app.hazconta.app_hazconta;
+package app.be.tecnich;
 
 import io.flutter.embedding.android.FlutterActivity;
 

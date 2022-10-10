@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'HazConta',
+      title: 'BE',
       theme: ThemeData(
         primarySwatch: Colors.blueGrey,
         primaryColor: Color(0xFF003954),

@@ -32,50 +32,47 @@ class _LoginState extends State<Login> {
             onTap: () {
               FocusScope.of(context).unfocus();
             },
-            child: Background(
-              child: ListView(
-                  shrinkWrap: true,
-                  padding: const EdgeInsets.all(30.0),
-                  children: <Widget>[
-                    Form(
-                      key: _.formKey,
-                      autovalidateMode: AutovalidateMode.onUserInteraction,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          Text(
-                            'ENTRAR',
-                            style: AppTextStyles.titlePage,
+            child:  ListView(
+                shrinkWrap: true,
+                padding: const EdgeInsets.all(30.0),
+                children: <Widget>[
+                  Form(
+                    key: _.formKey,
+                    autovalidateMode: AutovalidateMode.onUserInteraction,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        SizedBox(height: size.height * 0.02),
+                        SvgPicture.asset(
+                          "assets/beIcon/login.svg",
+                          height: size.height * 0.35,
+                        ),
+
+                        SizedBox(height: size.height * 0.02),
+                        RoundedInputField(
+                          textInputAction: TextInputAction.next,
+                          hintText: "Tu correo",
+                          type: TextInputType.emailAddress,
+                          onChanged: _.onEmailChanged,
+                          validator: _.onEmailValidator,
+                          icon: FaIcon(
+                            FontAwesomeIcons.envelope,
+                            color: AppColors.kPrimaryColor,
                           ),
-                          SvgPicture.asset(
-                            "assets/icons/my-password-pana.svg",
-                            height: size.height * 0.35,
-                          ),
-                          RoundedInputField(
-                            textInputAction: TextInputAction.next,
-                            hintText: "Tu correo",
-                            type: TextInputType.emailAddress,
-                            onChanged: _.onEmailChanged,
-                            validator: _.onEmailValidator,
-                            icon: FaIcon(
-                              FontAwesomeIcons.envelope,
-                              color: AppColors.kPrimaryColor,
-                            ),
-                          ),
-                          RoundedPasswordField(
-                            onChanged: _.onPassChanged,
-                            validators: _.onPassValidator,
-                            onFieldSubmitted: (String value) =>
-                                _.validateForm(context),
-                          ),
-                          RoundedButton(
-                            color: _.isLoading
-                                ? Colors.grey
-                                : AppColors.kPrimaryColor,
-                            text: _.isLoading ? "Cargando..." : "Entrar",
-                            press: () => _.validateForm(context),
-                          ),
-                          SizedBox(height: size.height * 0.02),
+                        ),
+                        RoundedPasswordField(
+                          onChanged: _.onPassChanged,
+                          validators: _.onPassValidator,
+                          onFieldSubmitted: (String value) =>
+                              _.validateForm(context),
+                        ),
+                        SizedBox(height: size.height * 0.02),
+                        RoundedButton(
+                          color: AppColors.kPrimaryColor,
+                          text:   "Entrar",
+                          press: () => _.validateForm(context),
+                        ),
+                        SizedBox(height: size.height * 0.02),
                           AlredyHaveAnAccountCheck(
                             press: () {
                               Get.toNamed(AppRoutes.REGISTER);
@@ -83,11 +80,10 @@ class _LoginState extends State<Login> {
                           ),
                           SizedBox(height: size.height * 0.02),
                           ChangePassword()
-                        ],
-                      ),
+                      ],
                     ),
-                  ]),
-            ),
+                  ),
+                ])
           ),
         ),
       ),

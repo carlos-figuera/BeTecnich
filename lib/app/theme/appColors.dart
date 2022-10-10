@@ -23,9 +23,9 @@ class AppColors{
   var kBlackColor = Colors.black;*/
 
 
-  static const kPrimaryColor = Color(0xFF003954);
+  static const kPrimaryColor = Color(0xFF003571);
   static const kSecondaryColorBlack = Colors.black87;
-  static const kPrimaryLightColor = Color(0xFFFFC6B3);
+  static const kPrimaryLightColor = Colors.black12;
   static const kAnaranjadoColor = Color(0xFFF23005);
   static const kAinactiColor = Colors.grey;
   static const kBackGoundGreyColor = Colors.white12;
