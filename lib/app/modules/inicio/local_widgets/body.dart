@@ -1,5 +1,5 @@
 import 'package:app_hazconta/app/modules/inicio/inicio_controller.dart';
-import 'package:app_hazconta/app/modules/inicio/local_widgets/background.dart';
+
 import 'package:app_hazconta/app/theme/Responsive.dart';
 import 'package:app_hazconta/app/theme/appColors.dart';
 import 'package:flutter/material.dart';

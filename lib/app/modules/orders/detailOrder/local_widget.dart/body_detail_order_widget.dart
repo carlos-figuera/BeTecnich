@@ -1,49 +1,38 @@
 
-import 'package:app_hazconta/app/modules/home/home.controller.dart';
-import 'package:app_hazconta/app/modules/home/local_widget.dart/item_plate_widget.dart';
-import 'package:app_hazconta/app/modules/home/sidebar/menu.page.dart';
-
+import 'package:app_hazconta/app/theme/appColors.dart';
+import 'package:app_hazconta/app/theme/appTextStyles.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../../theme/appColors.dart';
-import '../../../theme/appTextStyles.dart';
 
 
+import '../detail.order.controller.dart';
+import 'list_detail_order_widget.dart';
 
-class BodyHome extends StatelessWidget {
-  const BodyHome({Key? key}) : super(key: key);
+
+class DetailorderHome extends StatelessWidget {
+  const DetailorderHome({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     print('BodyHome');
-    return GetBuilder<HomeController>(
+    return GetBuilder<DetailOrderController>(
       id: 'BodyHome',
-      init: HomeController(),
+      init: DetailOrderController(),
       builder: (_) => Scaffold(
-        drawer: MenuDrawer(),
         appBar: AppBar(
           backgroundColor: AppColors.kPrimaryColor,
           centerTitle: true,
-          title: Text('BE.'.toUpperCase()),
+          title: Text('Nº Pedido: 49890489058'.toUpperCase()),
+          leading: Icon(Icons.abc,size: 1,),
+
+        ),
+        body: SafeArea(
+           child: ListDetailorderWidget()  ,
         ),
 
-        body: SafeArea(
-          child:Container(
-            child: Padding(
-              padding: const EdgeInsets.all(15.0),
-              child: Column(
-                children: [
-                  Row(children:
-                  [
-                    ButtonHome(onTabCar: _.goListOrdes),
-                     Expanded(child: SizedBox()),
-                   // ButtonHome()
-                  ]),
-                ],
-              ),
-            ),
-          )  ,
-        ),
+
+
+
         bottomNavigationBar: BottomAppBar(
           shape: CircularNotchedRectangle(),
           notchMargin: 10,
@@ -57,12 +46,10 @@ class BodyHome extends StatelessWidget {
                   children: [
                     MaterialButton(
                       minWidth: 40,
-                      onPressed: () {
-
-                      },
+                      onPressed:_.goBack,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
-                        children: [Icon(Icons.home, color:AppColors.kPrimaryColor), Text('Inicio',style:AppTextStyles.texButonBar )],
+                        children: [Icon(Icons.arrow_back_ios, color:AppColors.kPrimaryColor), Text('Regresar',style:AppTextStyles.texButonBar )],
                       ),
                     ),
                   ],
@@ -75,7 +62,7 @@ class BodyHome extends StatelessWidget {
                       onPressed: _.logOut,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
-                        children: [Icon(Icons.settings_sharp, color:AppColors.kPrimaryColor ), Text('Configurar',style:AppTextStyles.texButonBar )],
+                        children: [Icon(Icons.save, color:AppColors.kPrimaryColor ), Text('Guardar',style:AppTextStyles.texButonBar )],
                       ),
                     ),
                   ],

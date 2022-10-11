@@ -1,9 +1,8 @@
 import 'package:app_hazconta/app/data/models/RequestToken.dart';
-
 import 'package:app_hazconta/app/data/providers/local/local_user.dart';
 import 'package:app_hazconta/app/data/repository/local/local_auth_repository.dart';
 import 'package:app_hazconta/app/data/repository/remote/autentication_repository.dart';
-
+import 'package:app_hazconta/app/routes/app_routes.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -90,5 +89,11 @@ class LoginController extends GetxController {
         ],
       ));
     }
+  }
+
+
+
+  goHome(){
+    Get.toNamed(AppRoutes.Home);
   }
 }

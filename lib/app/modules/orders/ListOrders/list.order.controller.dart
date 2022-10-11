@@ -1,10 +1,14 @@
 
+
 import 'package:app_hazconta/app/data/providers/local/local_user.dart';
 import 'package:app_hazconta/app/data/repository/local/local_auth_repository.dart';
 import 'package:app_hazconta/app/routes/app_routes.dart';
 import 'package:get/get.dart';
 
-class HomeController extends GetxController {
+
+
+
+class ListOrderController extends GetxController {
   final LocalAuthRepository _localAuthRepository =
       Get.find<LocalAuthRepository>();
 
@@ -28,20 +32,23 @@ class HomeController extends GetxController {
 
   Future getCompany() async {
 
+    update(["SacaffoldAuth",'MenuPage']);
   }
 
   Future<void> logOut() async {
     await _localAuthRepository.clearSession();
 
   }
-
-int  changeRatioChart()
+  goDetailCar()
   {
-   update(["SacaffoldAuth"]) ;
-   return 1;
-  }
+    Get.toNamed(AppRoutes.DetailOrder);
+     print("Ver detail");
 
-  goListOrdes(){
-    Get.toNamed(AppRoutes.ListOrder);
+  }
+  goHome()
+  {
+     Get.toNamed(AppRoutes.Home);
+
+
   }
 }

@@ -3,10 +3,10 @@ import 'package:app_hazconta/app/global_widgets/change_password.dart';
 import 'package:app_hazconta/app/global_widgets/rounded_button.dart';
 import 'package:app_hazconta/app/global_widgets/rounded_input_field.dart';
 import 'package:app_hazconta/app/global_widgets/rounded_password_field.dart';
-import 'package:app_hazconta/app/modules/login/local_widgets/background.dart';
+
 import 'package:app_hazconta/app/modules/login/login_controller.dart';
 import 'package:app_hazconta/app/routes/app_routes.dart';
-import 'package:app_hazconta/app/theme/appTextStyles.dart';
+
 import 'package:app_hazconta/app/theme/appColors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -70,7 +70,7 @@ class _LoginState extends State<Login> {
                         RoundedButton(
                           color: AppColors.kPrimaryColor,
                           text:   "Entrar",
-                          press: () => _.validateForm(context),
+                          press: () => _.goHome(),
                         ),
                         SizedBox(height: size.height * 0.02),
                           AlredyHaveAnAccountCheck(

@@ -46,7 +46,7 @@ Future<int> validateget() async {
 }
 
 Future<bool> validateToken() async {
-  String ?token = await _localAuthRepository.token;
+
 
 
 

@@ -5,9 +5,9 @@ class AppRoutes {
   static const SPLASH = "/splash";
 
   static const DetailOrder = "/DetailOrder";
+  static const Home = "/Home";
 
-
-
+  static const ListOrder = "/ListOrder";
 
 
 

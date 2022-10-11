@@ -1,10 +1,10 @@
 
 
+import 'package:app_hazconta/app/data/providers/local/local_user.dart';
+import 'package:app_hazconta/app/data/repository/local/local_auth_repository.dart';
 import 'package:get/get.dart';
 
-import '../../data/providers/local/local_user.dart';
-import '../../data/repository/local/local_auth_repository.dart';
-import '../../routes/app_routes.dart';
+
 
 class DetailOrderController extends GetxController {
   final LocalAuthRepository _localAuthRepository =
@@ -37,9 +37,9 @@ class DetailOrderController extends GetxController {
     await _localAuthRepository.clearSession();
 
   }
-  goDetailCar()
+  goBack()
   {
-    //Get.toNamed(AppRoutes.DetailCar);
+    Get.back();
      print("Ver detail");
 
   }

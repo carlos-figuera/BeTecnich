@@ -30,12 +30,12 @@ class ListDetailorderWidget extends StatelessWidget {
                         children: [
                           HeaderDetailorderWidget(),
                           ItemDetailorderWidget(
-                            onTabCar: _.goDetailCar,
+                            onTabCar: (){},
                           )
                         ],
                       )
                       : ItemDetailorderWidget(
-                          onTabCar: _.goDetailCar,
+                          onTabCar:  (){},
                         );
                 }),
           )),

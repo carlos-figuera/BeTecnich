@@ -1,25 +1,27 @@
 
+import 'package:app_hazconta/app/modules/orders/ListOrders/list.order.controller.dart';
+import 'package:app_hazconta/app/theme/Responsive.dart';
+import 'package:app_hazconta/app/theme/appColors.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
-import '../../../theme/Responsive.dart';
-import '../../../theme/appColors.dart';
-import '../detail.order.controller.dart';
 
 
-class TextDetailorderWidget extends StatelessWidget {
+
+
+class TextOrderWidget extends StatelessWidget {
   final String name;
   final String value;
   final Color colo;
-  TextDetailorderWidget({required this.name,required this.value,required this.colo});
+  TextOrderWidget({required this.name,required this.value,required this.colo});
   @override
   Widget build(BuildContext context) {
-    print('TextPlateWidget');
-    return GetBuilder<DetailOrderController>(
-      id: 'TextPlateWidget',
-      init: DetailOrderController(),
+    print('TextOrderWidget');
+    return GetBuilder<ListOrderController>(
+      id: 'TextOrderWidget',
+      init: ListOrderController(),
       builder: (_) =>     Expanded(
         child: Row(
           children: [

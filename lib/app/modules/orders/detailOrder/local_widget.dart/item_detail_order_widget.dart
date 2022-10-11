@@ -1,11 +1,11 @@
+import 'package:app_hazconta/app/theme/Responsive.dart';
+import 'package:app_hazconta/app/theme/appColors.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+
 import 'package:get/get.dart';
-import '../../../global_widgets/simple.form.text.cover.dart';
-import '../../../theme/Responsive.dart';
-import '../../../theme/appColors.dart';
-import '../../home/local_widget.dart/text_plate_widget.dart';
+
+
 import '../detail.order.controller.dart';
 import 'text_detail_order_widget.dart';
 
